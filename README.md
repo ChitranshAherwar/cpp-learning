@@ -11,15 +11,16 @@ This repository contains my C++ learning projects, experiments, and notes.
 
 ## Topics Covered
 
+* Classes
+
+## Future Topics
+
 * Pointers
+* Stacks
 * References
 * Structs
 * Dynamic Arrays
 * Linked Lists
-
-## Future Topics
-
-* Stacks
 * Queues
 * Trees
 * Hash Tables
