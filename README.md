@@ -1,33 +1,55 @@
 # C++ Learning Journey
 
-This repository contains my C++ learning projects, experiments, and notes.
+This repository documents my journey of learning C++ through hands-on projects, data structure implementations, and experiments.
 
 ## Goals
 
 * Learn modern C++
-* Understand data structures and algorithms by implementing them from scratch
-* Improve problem-solving skills
-* Explore Linux and systems programming concepts
+* Build a strong understanding of data structures and algorithms
+* Improve problem-solving and debugging skills
+* Explore Linux, systems programming, and low-level concepts
+* Develop the foundations required for software engineering roles
 
-## Topics Covered
+## Fundamentals Covered
 
+* Variables and Data Types
+* Operators
+* Control Flow (if/else, loops)
+* Functions
+* Arrays
+* Structs
 * Classes
-* Pointers
+* Constructors
+* Destructors
 * References
+* Pointers
+* Dynamic Memory Allocation
+
+## Data Structures Covered
+
 * Dynamic Arrays
 * Linked Lists
 * Stacks
 
 ## Future Topics
 
-* Structs
 * Queues
+* Recursion
 * Trees
 * Hash Tables
+* Sorting Algorithms
+* Searching Algorithms
 * Graphs
-* Algorithms
+* Object-Oriented Programming
+* Templates
+* Standard Template Library (STL)
 * Memory Management
+* File Handling
 
 ## Notes
 
-This repository is primarily a learning log. Code quality, structure, and implementations will improve over time as I learn new concepts.
+This repository serves as a learning log and portfolio of my progress in C++.
+
+Most data structures and algorithms are implemented from scratch to understand how they work internally before using their standard library equivalents.
+
+As my knowledge grows, code quality, design decisions, and implementations will continue to improve.
