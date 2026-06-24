@@ -19,6 +19,7 @@ public:
 
     bool find(int value);
     int size();
+    bool remove(int value);
 
     void print_list();
 };
@@ -102,6 +103,33 @@ int LinkedList::size()
     return counter;
 }
 
+bool LinkedList::remove(int value)
+{
+    Node* current = head;
+    Node* previous = nullptr;
+
+    while(current != nullptr)
+    {
+        if(value == current->data)
+        {
+            if(previous == nullptr)
+            {
+                head = current->next;
+            }
+            else
+            {
+                previous->next = current->next;
+            }
+            delete current;
+            return true;
+        }
+        previous = current;
+        current = current->next;
+
+    }
+    return false;
+}
+
 
 void LinkedList::print_list()
 {
@@ -132,6 +160,17 @@ int main()
     {
         std::cout << "Not Found!\n";
     }
+
+    if(list.remove(30))
+    {
+        std::cout << "Removed.\n";
+    }
+    else
+    {
+        std::cout << "No value found in list.\n";
+    }
+
+
 
     std::cout << "Size: " << list.size() << '\n';
 
