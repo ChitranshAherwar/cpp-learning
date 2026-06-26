@@ -30,6 +30,7 @@ This repository documents my journey of learning C++ through hands-on projects, 
 * Dynamic Arrays
 * Linked Lists
 * Stacks
+* Circular Queues
 
 ## Future Topics
 

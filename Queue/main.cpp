@@ -4,8 +4,10 @@ class Queue
 {
 private:
     int* data;
+    int front = 0;
+    int rear = -1;
     int size{0};
-    int capacity{10};
+    int capacity{5};
 
 public:
     Queue()
@@ -20,7 +22,7 @@ public:
 
     void enqueue(int value);
     bool dequeue();
-    int front();
+    int frontQ();
 
     bool isEmpty();
     int getSize();
@@ -33,10 +35,11 @@ void Queue::enqueue(int value)
         std::cout << "Queue full.\n";
         return;
     }
-    data[size] = value;
+    rear = (rear + 1) % capacity;
+    data[rear] = value;
     size++;
 
-    std::cout << "Enqueue: " << data[size - 1] << '\n';
+    std::cout << "Enqueue: " << value << '\n';
 }
 
 bool Queue::dequeue()
@@ -44,23 +47,21 @@ bool Queue::dequeue()
     if(size == 0){
         return false;
     }
-    std::cout << "Dequeue: " << data[0] << '\n';
-
-    for(int i=0; i<(size-1); i++){
-        data[i] = data[i+1];
-    }
+    std::cout << "Dequeue: " << data[front] << '\n';
+    front = (front + 1) % capacity;
     size--;
     return true;
+    
 }
 
-int Queue::front()
+int Queue::frontQ()
 {
     if(size == 0)
     {
         std::cout << "Queue is empty.\n";
         return -1;
     }
-    return data[0];
+    return data[front];
 }
 
 bool Queue::isEmpty()
@@ -75,12 +76,18 @@ int Queue::getSize()
 
 int main()
 {
-    Queue a;
+    Queue q;
 
-    a.enqueue(10);
-    a.enqueue(20);
-    a.dequeue();
-    std::cout << "size: " << a.getSize() << '\n';
-    a.enqueue(30);
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+    q.enqueue(40);
+    q.enqueue(50);
+
+    q.dequeue();
+    q.dequeue();
+
+    q.enqueue(60);
+    q.enqueue(70);
     
 }
